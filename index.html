@@ -10,42 +10,57 @@
 </head>
 
 <body>
-<header>
-    <div Class="navbar"> 
-        <div class="nav-logo border">
-            <div class="logo"></div>
-        </div>
-        <div class="nav-address border">
-            <p class="add-first">Delivery to</p>
-            <div class="add-icon">
-                <i class= "fa-solid fa-location-dot"></i>
-                <select class="add-second">
-                    <option value="de">Deutschland</option>
-                    <option value="us">United States</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="fr">France</option>
-                    <option value="pk">Pakistan</option>
-                    <option value="in">India</option>
-                </select>
+    <header>
+        <div Class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
             </div>
-        </div>
-        
-        <div class="nav-search border">
-            <select class="search-select">
-                <option value="all">All</option>
-                <option value="electronics">electronics</option>
-                <option value="clothig">Clothing</option>
-                <option value="best sells">Best Sell for 2025</option>
-                <option value="mobile">Mobile</option>
-                <option value="jewelry">jewelry</option>
-                <option value="fession">Fession</option>
-                <option value="feel good">Feel Good</option>
-                <option value="kitchen">kitchen</option>
+            <div class="nav-address border">
+                <p class="add-first">Delivery to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <select class="add-second">
+                        <option value="de">Deutschland</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="fr">France</option>
+                        <option value="pk">Pakistan</option>
+                        <option value="in">India</option>
+                    </select>
+                </div>
+            </div>
 
+            <div class="nav-search border">
+                <select class="search-select">
+                    <option value="all">All</option>
+                    <option value="electronics">electronics</option>
+                    <option value="fession">Fession</option>
+                    <option value="feel good">Feel Good</option>
+                    <option value="kitchen">kitchen</option>
+                </select>
+                <input placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!--Language Section-->
+            <select id="languageSelector" onchange="setLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
             </select>
-            <input placeholder="Search Amazon" class="search-input">
-            <div class="search-icon">
-             <i class="fa-solid fa-magnifying-glass"></i>
+
+            <div class="nav-signin border">
+                <p><span>Hallo, sign in</span></p>
+                <p class="nav-second">Account & List</p>
+            </div>
+            <div class="nav-signin border">
+                <p><span>Returns</span></p>
+                <p class="nav-second"> & Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-plus"></i>
+                cart
             </div>
         </div>
         <div class="Panel">
@@ -63,61 +78,29 @@
             <div class="Electronic">Shop Deals in Electronic</div>
         </div>
     </header>
-  
- <div class="hero-sec">
-    <div class="hero-msg">You are on Amazon.com, You can also purches milion of Products with fast local Delivery. <a> Click here to go Amazon.Afg</a></div>
- </div>
- 
-<!-- show products here -->
-    <div class="box-sec">
-        
+
+    <div class="hero-sec">
+        <div class="hero-msg">You are on Amazon.com, You can also purches milion of Products with fast local Delivery.
+            <a> Click here to go Amazon.Afg</a>
+        </div>
     </div>
+
+    <!-- show products here -->
+    <div class="box-sec"></div>
     <button class="more-btn">See more products</button>
-<!-- end of showing -->
+    <!-- end of showing -->
+
     <footer>
         <div class="footer-panel1">
             <p>Back to Top</p>
         </div>
         <div class="panel2">
             <ul>
-                <p>Über Amazon</p>
-                <a>Karriere bei Amazon</a>
-                <a>Pressemitteilungen</a>
-                <a>Erfahre mehr über Amazon</a>
-                <a>Impressum</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <p>Über Amazon</p>
-                <a>Karriere bei Amazon</a>
-                <a>Pressemitteilungen</a>
-                <a>Erfahre mehr über Amazon</a>
-                <a>Impressum</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <p>Über Amazon</p>
-                <a>Karriere bei Amazon</a>
-                <a>Pressemitteilungen</a>
-                <a>Erfahre mehr über Amazon</a>
-                <a>Impressum</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <p>Über Amazon</p>
-                <a>Karriere bei Amazon</a>
-                <a>Pressemitteilungen</a>
-                <a>Erfahre mehr über Amazon</a>
-                <a>Impressum</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <p>Über Amazon</p>
-                <a>Karriere bei Amazon</a>
-                <a>Pressemitteilungen</a>
-                <a>Erfahre mehr über Amazon</a>
-                <a>Impressum</a>
-                <a>Amazon Science</a>
+                <a href="uber amazon">Über Amazon</a>
+                <a href="karrier bei amazon">Karriere bei Amazon</a>
+                <a href="datenschutz">Datenschutz</a>
+                <a href="gift card">Gift card</a>
+                <a href="kontakt">Kontakt</a>
             </ul>
         </div>
         <div class="foot-panel3">
