@@ -22,7 +22,6 @@ fetch (`https://fakestoreapi.com/products/categories`).then(Response =>{
 document.getElementById('languageSelector').addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
 
-    // Perform an action based on the selected language
     switch (selectedLanguage) {
         case 'en':
             console.log('Language changed to English');
