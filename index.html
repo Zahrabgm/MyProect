@@ -27,8 +27,7 @@
                 </select>
             </div>
         </div>
-        
-        <div class="nav-search border">
+         <div class="nav-search border">
             <select class="search-select">
                 <option value="all">All</option>
                 <option value="electronics">electronics</option>
@@ -39,13 +38,21 @@
                 <option value="fession">Fession</option>
                 <option value="feel good">Feel Good</option>
                 <option value="kitchen">kitchen</option>
-
-            </select>
-            <input placeholder="Search Amazon" class="search-input">
+           </select>
+            <button id="search-button"></button>
+            <input id="search-bar" placeholder="Search Amazon" class="search-input">
             <div class="search-icon">
              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
+
+        <!--Language Section-->
+        <select id="languageSelector" onchange="setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+          
+          
         <div class="nav-signin border">
             <p><span>Hallo, sign in</span></p>
             <p class="nav-second">Account & List</p>
@@ -135,46 +142,14 @@
         <p>Back to Top</p>
     </div>
     <div class="panel2">
+      
       <ul>
-        <p>Über Amazon</p>
-        <a>Karriere bei Amazon</a>
-        <a>Pressemitteilungen</a>
-        <a>Erfahre mehr über Amazon</a>
-        <a>Impressum</a>
-        <a>Amazon Science</a>
+        <a href="uber amazon">Über Amazon</a>
+        <a href="karrier bei amazon">Karriere bei Amazon</a>
+        <a href="datenschutz">Datenschutz</a>
+        <a href="kontakt">Kontakt</a>
       </ul>
-      <ul>
-        <p>Über Amazon</p>
-        <a>Karriere bei Amazon</a>
-        <a>Pressemitteilungen</a>
-        <a>Erfahre mehr über Amazon</a>
-        <a>Impressum</a>
-        <a>Amazon Science</a>
-      </ul>
-      <ul>
-        <p>Über Amazon</p>
-        <a>Karriere bei Amazon</a>
-        <a>Pressemitteilungen</a>
-        <a>Erfahre mehr über Amazon</a>
-        <a>Impressum</a>
-        <a>Amazon Science</a>
-      </ul>
-      <ul>
-        <p>Über Amazon</p>
-        <a>Karriere bei Amazon</a>
-        <a>Pressemitteilungen</a>
-        <a>Erfahre mehr über Amazon</a>
-        <a>Impressum</a>
-        <a>Amazon Science</a>
-      </ul>
-      <ul>
-        <p>Über Amazon</p>
-        <a>Karriere bei Amazon</a>
-        <a>Pressemitteilungen</a>
-        <a>Erfahre mehr über Amazon</a>
-        <a>Impressum</a>
-        <a>Amazon Science</a>
-      </ul>
+      
     </div>
     <div class="foot-panel3">
         <div class="logo"></div>

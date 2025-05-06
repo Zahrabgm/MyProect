@@ -172,23 +172,29 @@ font-size: 25px;
     color: white;
     height: 300px; 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 ul {
-    margin-top: 20px;
+    margin-top: 100px;
+
 }
+
 ul a {
-    display: block;
-    font-size: 0.85rem;
+   display: flex;
+   text-decoration: none;
+    font-size: 1rem;
     color: #dddddd;
     margin-top: 10px;
+   
 }
+
 .foot-panel3 {
     background-color:#222f3d;
-    height: 70px;
+    height: 100px;
     border-top: 0.5px solid white;
     display: flex;
     justify-content: center;
+    padding-top: 15px;
 
 }
 .logo {
