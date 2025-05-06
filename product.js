@@ -1,7 +1,6 @@
-//const productId = getItem("productId");
-//const productCategory = getItem("productCategory");
-const productId = 1;
-const productCategory = "men's clothing";
+const productId = localStorage.getItem("productId");
+const productCategory = localStorage.getItem("productCategory");
+
 const productLeftSide = document.querySelector(".product-left-side");
 const productMiddleSide = document.querySelector(".product-middle-side");
 const productRightSide = document.querySelector(".product-right-side");
@@ -33,6 +32,8 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
                                     `;
         rightPrice.innerText = productData.price + " €";
         pathProduct.innerHTML = productData.category + " > " + productData.title;
+        localStorage.clear();
+
     });
 
 /* async function getData(){
@@ -72,6 +73,7 @@ fetch(`https://fakestoreapi.com/products/category/${productCategory}`)
                                         <h4 class="more">${item.price} €</h4>
                                     </div>`;
     });
+    localStorage.clear();
   })
   .catch(err => console.error("Error loading category items:", err));
 
