@@ -198,5 +198,80 @@ ul a {
     width: 100px;  
 }
 
+/* For product page - Xuyen */
+.product-center {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    
+}
 
+.image-product {
+    width: 20em;
+    padding: 1em;
+}
+
+.product-left-side {
+    border: 1px solid gainsboro;
+}
+
+.btn {
+    background-color: #febd68;
+    width: 15em;
+    padding: .5em;
+    border: 1px solid #febd68;
+    border-radius: 15px;
+    margin: .5em 0;
+    cursor: pointer;
+}
+
+.add {
+    background-color: rgb(240, 227, 42);
+}
+
+#quantity {
+    width: 15em;
+    padding: .5em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.other-products {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    border: 2px solid gainsboro;
+    text-transform: uppercase;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.path-product {
+    padding: 1em;
+    
+    color: rgb(139, 131, 131);
+}
+
+.product-right-side {
+    border: 1px solid gainsboro;
+    padding: 0 1em;
+}
+
+.product-middle-side {
+    padding: 0 1em;
+}
+
+.related-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.more {
+    width: 10em;
+
+}
 
