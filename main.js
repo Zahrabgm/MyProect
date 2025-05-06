@@ -1,3 +1,27 @@
+// Categories 
+
+
+/* Language section*/
+document.getElementById('languageSelector').addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+
+    // Perform an action based on the selected language
+    switch (selectedLanguage) {
+        case 'en':
+            console.log('Language changed to English');
+            document.body.innerHTML += `<p>Language changed to English</p>`;
+            break;
+        case 'de':
+            console.log('Language changed to Deutsch');
+            document.body.innerHTML += `<p>Sprache geändert zu Deutsch</p>`;
+            break;
+        default:
+            console.log('Language not supported');
+            document.body.innerHTML += `<p>Language not supported</p>`;
+    }
+});
+
+
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
 let startIndex = 0;
