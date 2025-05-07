@@ -32,7 +32,7 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
                                     `;
         rightPrice.innerText = productData.price + " €";
         pathProduct.innerHTML = productData.category + " > " + productData.title;
-        localStorage.clear();
+        localStorage.removeItem('productId');
 
     });
 
@@ -73,7 +73,7 @@ fetch(`https://fakestoreapi.com/products/category/${productCategory}`)
                                         <h4 class="more">${item.price} €</h4>
                                     </div>`;
     });
-    localStorage.clear();
+    localStorage.removeItem('productCategory');
   })
   .catch(err => console.error("Error loading category items:", err));
 

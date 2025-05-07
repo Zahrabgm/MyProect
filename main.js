@@ -2,7 +2,7 @@
 
 
 /* Language section*/
-document.getElementById('languageSelector').addEventListener('change', (event) => {
+/*document.getElementById('languageSelector').addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
 
     // Perform an action based on the selected language
@@ -19,11 +19,13 @@ document.getElementById('languageSelector').addEventListener('change', (event) =
             console.log('Language not supported');
             document.body.innerHTML += `<p>Language not supported</p>`;
     }
-});
+});*/
 
-
+// Products section
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
+const searchInput = document.querySelector(".search-input");
+const searchbtn = document.querySelector(".search-icon");
 let startIndex = 0;
 let endIndex = 8;
 // get api 8 products
@@ -48,8 +50,15 @@ fetch(`https://fakestoreapi.com/products`)
             }
         })
 
+        // search section - redirect to new page
+        searchbtn.addEventListener("click", () => {
+            localStorage.setItem("searchText", searchInput.value);
+            window.location.href = 'aftersearching.html';
+        })
+        
+        
     })
-    .catch(err => console.error("Error loading categories:", err));
+    .catch(err => console.error("Error loading products:", err));
     
 // create function for showing produtcs
     function createElement(array) {
@@ -72,3 +81,8 @@ fetch(`https://fakestoreapi.com/products`)
             });
         });
     }
+
+
+
+
+
