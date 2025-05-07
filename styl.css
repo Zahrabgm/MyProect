@@ -210,6 +210,20 @@ span {
 
 ul {
     margin-top: 100px;
+
+}
+
+ul a {
+   display: flex;
+   text-decoration: none;
+    font-size: 1rem;
+    color: #dddddd;
+    margin-top: 10px;
+   
+}
+
+.foot-panel3 {
+    background-color:#222f3d;
 }
 
 ul a {
