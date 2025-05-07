@@ -32,7 +32,8 @@
 
 .border:hover {
     border: 1.5px solid white;
-    margin-top: 3px;
+    margin-top: 1px;
+   
 }
 
 .add-first {
@@ -125,6 +126,11 @@ span {
 .Panel-ops {
     width: 70%;
     font-size: 0.85rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Panel-ops a {
+    color: white;
 }
 
 .Elecktronic {
