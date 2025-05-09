@@ -1,7 +1,9 @@
 <header>
     <div Class="navbar">
         <div class="nav-logo border">
-            <div class="logo"></div>
+            <a href="index.html">
+                <div class="logo"></div>
+            </a>
         </div>
         <div class="nav-address border">
             <p class="add-first">Delivery to</p>
@@ -19,13 +21,7 @@
         </div>
 
         <div class="nav-search border">
-            <select class="search-select">
-                <option value="all">All</option>
-                <option value="electronics">electronics</option>
-                <option value="fession">Fession</option>
-                <option value="feel good">Feel Good</option>
-                <option value="kitchen">kitchen</option>
-            </select>
+            <!-- select options will appear here -->
             <input placeholder="Search Amazon" class="search-input">
             <div class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -33,10 +29,10 @@
         </div>
 
         <!--Language Section-->
-        <select id="languageSelector" onchange="setLanguage(this.value)">
+        <!-- <select id="languageSelector" onchange="setLanguage(this.value)">
             <option value="en">English</option>
             <option value="de">Deutsch</option>
-        </select>
+        </select>-->
 
         <div class="nav-signin border">
             <p><span>Hallo, sign in</span></p>
@@ -47,8 +43,10 @@
             <p class="nav-second"> & Orders</p>
         </div>
         <div class="nav-cart border">
-            <i class="fa-solid fa-cart-plus"></i>
-            cart
+            
+            <img class="img-cart" src="cart.svg" alt="">
+            <a id="cart" href="cart.html"></a>
+            
         </div>
     </div>
     <div class="Panel">
@@ -66,3 +64,5 @@
         <div class="Electronic">Shop Deals in Electronic</div>
     </div>
 </header>
+<!-- searching bar -->
+<script type="module" src="header.js"></script>

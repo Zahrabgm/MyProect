@@ -107,6 +107,9 @@ span {
 .nav-cart {
     font-size: 0.85rem;
     font-weight: 700;
+    position: relative;
+    width: 3em;
+    height: 3em;
 }
 
 .Panel {
@@ -214,16 +217,16 @@ ul {
 }
 
 ul a {
-   display: flex;
-   text-decoration: none;
+    display: flex;
+    text-decoration: none;
     font-size: 1rem;
     color: #dddddd;
     margin-top: 10px;
-   
+
 }
 
 .foot-panel3 {
-    background-color:#222f3d;
+    background-color: #222f3d;
 }
 
 ul a {
@@ -267,6 +270,38 @@ ul a {
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* For searh page */
+.notice {
+    color: blue;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1em;
+}
+
+.box-search {
+    background-color: white;
+    background-size: cover;
+    padding: 1em;
+    margin-top: 15px;
+    width: 20vw;
+    border: 1px solid rgb(16, 53, 219);
+}
+
+.search-select {
+    display: flex;
+    justify-content: start;
+}
+
 /* For product page - Xuyen */
 .product-center {
     display: flex;
@@ -298,6 +333,10 @@ ul a {
     background-color: rgb(240, 227, 42);
 }
 
+.continue {
+    background-color: pink;
+}
+
 #quantity {
     width: 15em;
     padding: .5em;
@@ -313,7 +352,7 @@ ul a {
     border: 2px solid gainsboro;
     text-transform: uppercase;
 
-    
+
 }
 
 .path-product {
@@ -344,4 +383,103 @@ ul a {
 
 a {
     text-decoration: none;
+}
+
+/* cart page */
+#cart {
+    position: absolute;
+    top: .9em;
+    left: 1.4em;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* top layer */
+    display: block;
+    /* Optional styling */
+    background-color: transparent;
+    color: greenyellow;
+}
+
+.cart-sum {
+    color: black;
+}
+
+.img-cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* background layer */
+}
+
+.cart-page {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em;
+}
+
+.cartpage {
+    border: 1px solid gray;
+    background-color: hsla(0, 36%, 96%, 0.849);
+    padding: 1em;
+}
+
+.cleft {
+    display: flex;
+    flex-direction: column;
+}
+
+.clist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid gray;
+    gap: 2em;
+}
+
+.delete-link {
+    font-size: small;
+    color: #726868;
+}
+
+.cart-ql {
+    color: rgb(214, 24, 56);
+}
+
+/* middle page - before go to cart for payment*/
+.middle-page {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: .5em;
+}
+
+.middleside {
+    border: 1px solid gray;
+    background-color: hsla(0, 36%, 96%, 0.849);
+    padding: 1em;
+    
+}
+
+.left {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+.total-price {
+    color: rgb(228, 81, 23);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.middleside-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
