@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("searchText", searchInput.value);
             window.location.href = 'aftersearching.html';
         })
-         })
     .catch(err => console.error("Error loading products:", err));
     
 // create function for showing produtcs
@@ -119,6 +118,6 @@ function createElement(array) {
             localStorage.setItem("productId", product.id);
             localStorage.setItem("productCategory", product.category);
         });
-    };
+    })};
   
     
