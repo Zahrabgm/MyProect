@@ -1,16 +1,19 @@
 * {
-    margin: o;
+    margin: 0;
     font-family: Arial;
-    border: border-box;
+   /* border: border-box;*/
 }
 
 .navbar {
     height: 60px;
+    width: 100vw;
+    position: fixed;
     background-color: #0f1111;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    top: 0;
 
 }
 
@@ -112,25 +115,59 @@ span {
     height: 3em;
 }
 
-.Panel {
+/*BurgerMenu */
+.burgerMenu {
+    background-color: #222f3d ;
+    width: 100%;
     height: 40px;
-    background-color: #222f3d;
-    display: flex;
-    color: white;
-    justify-content: space-evenly;
-    align-items: center;
+    line-height:40px;
+    top: 55px;
+    position: fixed;
+}
+#menu-toggle {
+    margin-left: 10px;
+}
+#menu-list {
+    
+    background: #dddddd;
+    width: 250px;
+    height: 100vh;
+    list-style: none;
+    padding: 0;
+    margin-left:0px;
+}
+#menu-list a {
+    color:#222f3d;
+    text-decoration: none;
+}
+#menu-list li {
+    padding-left: 20px;
+    border-bottom: 1px solid #222f3d ;
+}
+.hidden {
+    visibility: hidden;
+}
+.active {
+    visibility: visible;
+animation:slide-in 0.3s ease-in-out;
 }
 
-.Panel-ops p {
-    display: inline;
-    margin-left: 15px;
+@keyframes slide-in {
+    0%{
+       transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
-
-.Panel-ops {
-    width: 70%;
-    font-size: 0.85rem;
+@keyframes slide-out {
+    0%{
+       transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
-
 .Elecktronic {
     font-size: 0.90rem;
     font-weight: 700;
@@ -139,6 +176,7 @@ span {
 .hero-sec {
     background-image: url(hero-image.jpg);
     background-size: cover;
+    padding-top: 100px;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -149,6 +187,7 @@ span {
     background-color: white;
     color: black;
     height: 40px;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,6 +233,7 @@ span {
 }
 
 .footer-panel1 {
+    cursor: pointer;
     background-color: #37475a;
     color: white;
     display: flex;
@@ -202,15 +242,22 @@ span {
     justify-content: center;
     font-size: 0.85rem;
 }
+.footer-panel1:hover {
+    background-color:#37475a92;
+}
 
 .panel2 {
     background-color: #222f3d;
     color: white;
     height: 300px;
-    display: flex;
     justify-content: center;
 }
-
+.panel2  a {
+    display: block;
+    padding-left: 45%;
+    padding-top: 2rem;
+    color: #dddddd;
+}
 ul {
     margin-top: 100px;
 
@@ -222,28 +269,18 @@ ul a {
     font-size: 1rem;
     color: #dddddd;
     margin-top: 10px;
-
 }
 
 .foot-panel3 {
     background-color: #222f3d;
 }
-
-ul a {
-    display: flex;
-    font-size: 1rem;
-    color: #dddddd;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
 .foot-panel3 {
     background-color: #222f3d;
     height: 100px;
     border-top: 0.5px solid white;
     display: flex;
     justify-content: center;
-    padding-top: 15px;
+    padding-top: 2rem;
 
 }
 
@@ -263,9 +300,9 @@ ul a {
 .more-btn {
     margin: 2em auto;
     position: relative;
-    left: 50vw;
+    left: 45vw;
     height: 3em;
-    background-color: #febd68;
+    background-color: #e5530f;
     border: 1px solid orange;
     border-radius: 8px;
     cursor: pointer;

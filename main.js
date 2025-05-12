@@ -1,3 +1,65 @@
+
+
+fetch ('https://fakestoreapi.com/products/categories').then(Response =>{
+    if(!Response.ok) {
+        throw new Error("there is an error");    
+    }
+    return Response.json();
+})
+.then(data =>  {
+
+ console.log(data)
+
+ const resultsContainer = document.querySelector(`.nav-search border`)
+ resultsContainer.innerHTML += `<p>Result: ${JSON.stringify(data)}</p>`
+})
+.catch(error =>{
+    console.error(`Fetch error:`, error);
+    document.querySelector('.nav-search.border').innerHTML += `<p>Something went wrong!<p/>`
+})
+
+
+/* Language section*/
+document.getElementById('languageSelector').addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+
+    switch (selectedLanguage) {
+        case 'en':
+            console.log('Language changed to English');
+            document.body.innerHTML += `<p>Language changed to English</p>`;
+            break;
+        case 'de':
+            console.log('Language changed to Deutsch');
+            document.body.innerHTML += `<p>Sprache geändert zu Deutsch</p>`;
+            break;
+        default:
+            console.log('Language not supported');
+            document.body.innerHTML += `<p>Language not supported</p>`;
+    }
+});
+// Optional: Close the dropdown menu when clicking outside
+document.addEventListener('DOMContentLoaded', () =>  {
+const menuToggle = document.querySelector('#menu-toggle');
+const menuList = document.querySelector('#menu-list');
+console.log(menuList);
+
+
+if (menuToggle && menuList) {
+    menuToggle.addEventListener('click', function () {
+        menuList.classList.toggle('active');
+    })
+} else {
+    console.error('Menu toggle or menu list element not found')
+}
+});
+// Footer Section
+document.querySelector('.footer-panel1').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+    })
+})
+
 // Products section
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
@@ -30,6 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error search/loading products:", err));
 });
 
+        // search section - redirect to new page
+        searchbtn.addEventListener("click", () => {
+            localStorage.setItem("searchText", searchInput.value);
+            window.location.href = 'aftersearching.html';
+        })
+    .catch(err => console.error("Error loading products:", err));
+    
 // create function for showing produtcs
 function createElement(array) {
     array.slice(startIndex, endIndex).forEach((product) => {
@@ -49,10 +118,6 @@ function createElement(array) {
             localStorage.setItem("productId", product.id);
             localStorage.setItem("productCategory", product.category);
         });
-    });
-}
-
-
-
-
-
+    })};
+  
+    
