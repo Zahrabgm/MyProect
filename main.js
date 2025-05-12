@@ -53,7 +53,7 @@ if (menuToggle && menuList) {
 }
 });
 // Footer Section
-document.querySelector('footer-panel1').addEventListener('click',() => {
+document.querySelector('.footer-panel1').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior:'smooth'
