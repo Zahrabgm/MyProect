@@ -38,7 +38,7 @@ fetch(`https://fakestoreapi.com/products/categories`)
             console.error("searchInput or searchbtn element not found.");
         }
     })
-    .catch(err => console.error("Error loading search categories:", err));
+    .catch(err => console.error("Error loading search categories:", err))
 
 // get quantity in cart and show up
 const storedProducts = JSON.parse(localStorage.getItem('buyProducts'));

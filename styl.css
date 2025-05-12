@@ -232,8 +232,8 @@ animation:slide-in 0.3s ease-in-out;
     padding: 1em;
 }
 
-.footer {
-    margin-top: 15px;
+footer {
+    margin-top: 0px;
 }
 
 .footer-panel1 {
@@ -524,8 +524,19 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (max-width:1150px) {
+@media screen and (max-width:600px) {
     .nav-signin {
+        display: none;
+    }
+    .nav-address{
+        display: none;
+    }
+    .box-sec{
+        flex-wrap: wrap;
+    }
+}
+@media  screen and (max-width:600px) {
+    #languageSelector{
         display: none;
     }
 }

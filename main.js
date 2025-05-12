@@ -47,18 +47,18 @@ const menuList = document.querySelector('#menu-list');
 if (menuToggle && menuList) {
     menuToggle.addEventListener('click', function () {
         menuList.classList.toggle('active');
-    });
+    })
 } else {
-    console.error('Menu toggle or menu list element not found')
-}
+    console.error('Menu toggle or menu list element not found', error)}
 });
+
 // Footer Section
 document.querySelector('.footer-panel1').addEventListener('click', () => {
-    window.scrollTo({
+    window.scrollTo ({
         top: 0,
         behavior:'smooth'
     })
-})
+});
 
 // Products section
 const boxSec = document.querySelector(".box-sec");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
         // search section - redirect to new page
-        searchbtn.addEventListener("click", () => {
+        searchbtn.addEventListener('click', () => {
             localStorage.setItem("searchText", searchInput.value);
             window.location.href = 'aftersearching.html';
         })
