@@ -63,31 +63,34 @@ document.querySelector('.footer-panel1').addEventListener('click', () => {
 // Products section
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
-const searchInput = document.querySelector(".search-input");
-const searchbtn = document.querySelector(".search-icon");
+
 let startIndex = 0;
 let endIndex = 8;
 // get api 8 products
-fetch(`https://fakestoreapi.com/products`)
-    .then(response => response.json())
-    .then(allproducts => {
-        createElement(allproducts);
+document.addEventListener("DOMContentLoaded", () => {
+    fetch(`https://fakestoreapi.com/products`)
+        .then(response => response.json())
+        .then(allproducts => {
+            createElement(allproducts);
 
-        // load more 8 products after clicking
-        morebtn.addEventListener("click", () => {
-            startIndex += 8;
-            endIndex += 8;
-            if (endIndex >= allproducts.length) {
-                boxSec.innerHTML += `<div class="box-contant">    
+            // load more 8 products after clicking
+            morebtn.addEventListener("click", () => {
+                startIndex += 8;
+                endIndex += 8;
+                if (endIndex >= allproducts.length) {
+                    boxSec.innerHTML += `<div class="box-contant">    
                                         <b>NO PRODUCT TO LOAD !</b>     
                                     </div>`;
-                morebtn.style.display = "none";
+                    morebtn.style.display = "none";
 
-            }
-            else {
-                createElement(allproducts);
-            }
+                }
+                else {
+                    createElement(allproducts);
+                }
+            })
         })
+        .catch(err => console.error("Error search/loading products:", err));
+});
 
         // search section - redirect to new page
         searchbtn.addEventListener("click", () => {
@@ -98,11 +101,11 @@ fetch(`https://fakestoreapi.com/products`)
     .catch(err => console.error("Error loading products:", err));
     
 // create function for showing produtcs
-    function createElement(array) {
-        array.slice(startIndex, endIndex).forEach((product) => {
-            const box = document.createElement("div");
-            box.classList.add("box");
-            box.innerHTML = `
+function createElement(array) {
+    array.slice(startIndex, endIndex).forEach((product) => {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.innerHTML = `
                             <div class="box-contant">
                                 <a href="product.html"><h2>${product.title}</h2></a>
                                 <div class="box-img">
@@ -111,11 +114,10 @@ fetch(`https://fakestoreapi.com/products`)
                                 <a href="product.html" class="see-more">See more</a>
                             </div>
                             `;
-            boxSec.appendChild(box);
-            box.querySelector(".box-contant").addEventListener("click", () => {
-                localStorage.setItem("productId", product.id);
-                localStorage.setItem("productCategory", product.category);
-            });
+        boxSec.appendChild(box);
+        box.querySelector(".box-contant").addEventListener("click", () => {
+            localStorage.setItem("productId", product.id);
+            localStorage.setItem("productCategory", product.category);
         });
     };
   

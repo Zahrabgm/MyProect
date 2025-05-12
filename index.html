@@ -10,78 +10,10 @@
 </head>
 
 <body>
-    <header>
-        <a id="top"></a>
-        <div Class="navbar">
-            <div class="nav-logo border">
-                <div class="logo"></div>
-            </div>
-            <div class="nav-address border">
-                <p class="add-first">Delivery to</p>
-                <div class="add-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <select class="add-second">
-                        <option value="de">Deutschland</option>
-                        <option value="us">United States</option>
-                        <option value="uk">United Kingdom</option>
-                        <option value="fr">France</option>
-                        <option value="pk">Pakistan</option>
-                        <option value="in">India</option>
-                    </select>
-                </div>
-            </div>
-    
-            <div class="nav-search border">
-                <select class="search-select">
-                    <option value="all">All</option>
-                    <option value="electronics">electronics</option>
-                    <option value="fession">Fession</option>
-                    <option value="feel good">Feel Good</option>
-                    <option value="kitchen">kitchen</option>
-                </select>
-                <input placeholder="Search Amazon" class="search-input">
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-    
-            <!--Language Section-->
-            <select id="languageSelector" onchange="setLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
-    
-            <div class="nav-signin border">
-                <p><span>Hallo, sign in</span></p>
-                <p class="nav-second">Account & List</p>
-            </div>
-            <div class="nav-signin border">
-                <p><span>Returns</span></p>
-                <p class="nav-second"> & Orders</p>
-            </div>
-            <div class="nav-cart border">
-                <i class="fa-solid fa-cart-plus"></i>
-                cart
-            </div>
-        </div>
-        <br>
-        </header>
-         <div class="burgerMenu">
-            <button id="menu-toggle">all
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul id="menu-list" class="hidden">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
-          <div class="hero-sec">
-      
-    
-        <div class="hero-msg">You are on Amazon.com, You can also purches milion of Products with fast local Delivery.
-            <a> Click here to go Amazon.De</a>
-        </div>
+    <div id="header"></div>
+
+    <div class="hero-sec">
+        
     </div>
     
     <!-- show products here -->
@@ -90,6 +22,7 @@
     <!-- end of showing -->
 
     <div id="footer"></div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <footer>
         <div class="footer-panel1">
