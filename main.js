@@ -1,3 +1,4 @@
+
 // Products section
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
@@ -50,6 +51,11 @@ function createElement(array) {
         });
     });
 }
+
+
+
+
+
 
 
 
