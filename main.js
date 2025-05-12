@@ -1,4 +1,4 @@
-
+/*
 
 fetch ('https://fakestoreapi.com/products/categories').then(Response =>{
     if(!Response.ok) {
@@ -19,7 +19,7 @@ fetch ('https://fakestoreapi.com/products/categories').then(Response =>{
 })
 
 
-/* Language section*/
+/* Language section
 document.getElementById('languageSelector').addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
 
@@ -37,17 +37,17 @@ document.getElementById('languageSelector').addEventListener('change', (event) =
             document.body.innerHTML += `<p>Language not supported</p>`;
     }
 });
+*/
 // Optional: Close the dropdown menu when clicking outside
+
 document.addEventListener('DOMContentLoaded', () =>  {
 const menuToggle = document.querySelector('#menu-toggle');
 const menuList = document.querySelector('#menu-list');
-console.log(menuList);
-
 
 if (menuToggle && menuList) {
     menuToggle.addEventListener('click', function () {
         menuList.classList.toggle('active');
-    })
+    });
 } else {
     console.error('Menu toggle or menu list element not found')
 }

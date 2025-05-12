@@ -128,13 +128,17 @@ span {
     margin-left: 10px;
 }
 #menu-list {
-    
-    background: #dddddd;
+    margin-top: -10px;
+    display: none;
+     background: #dddddd;
     width: 250px;
     height: 100vh;
     list-style: none;
     padding: 0;
     margin-left:0px;
+}
+#menu-list.active {
+    display: block;
 }
 #menu-list a {
     color:#222f3d;
