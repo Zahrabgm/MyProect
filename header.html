@@ -29,10 +29,10 @@
         </div>
 
         <!--Language Section-->
-        <!-- <select id="languageSelector" onchange="setLanguage(this.value)">
+         <select id="languageSelector" onchange="setLanguage(this.value)">
             <option value="en">English</option>
             <option value="de">Deutsch</option>
-        </select>-->
+        </select>
 
         <div class="nav-signin border">
             <p><span>Hallo, sign in</span></p>
@@ -49,19 +49,15 @@
             
         </div>
     </div>
-    <div class="Panel">
-        <div class="Panel-all">
+    <div class="burgerMenu">
+        <button id="menu-toggle">
             <i class="fa-solid fa-bars"></i>
-            all
-        </div>
-        <div class="Panel-ops">
-            <p>Today's Deals</p>
-            <p>Costumer service</p>
-            <p>Registry</p>
-            <p>Gift cards</p>
-            <p>Sell</p>
-        </div>
-        <div class="Electronic">Shop Deals in Electronic</div>
+        </button>
+        <ul id="menu-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
     </div>
 </header>
 <!-- searching bar -->
