@@ -1,19 +1,16 @@
 * {
-    margin: 0;
+    margin: o;
     font-family: Arial;
-   /* border: border-box;*/
+    border: border-box;
 }
 
 .navbar {
     height: 60px;
-    width: 100vw;
-    position: fixed;
     background-color: #0f1111;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    top: 0;
 
 }
 
@@ -115,63 +112,88 @@ span {
     height: 3em;
 }
 
+
 /*BurgerMenu */
 .burgerMenu {
-    background-color: #222f3d ;
+    background-color: #222f3d;
     width: 100%;
     height: 40px;
-    line-height:40px;
-    top: 55px;
-    position: fixed;
+    line-height: 40px;
+    position: relative;
 }
+
 #menu-toggle {
     margin-left: 10px;
 }
+
 #menu-list {
     margin-top: -10px;
     display: none;
-     background: #dddddd;
+    background: #dddddd;
     width: 250px;
-    height: 100vh;
+    height: 30vh;
     list-style: none;
     padding: 0;
-    margin-left:0px;
-}
-#menu-list.active {
-    display: block;
+    margin-left: 0px;
 }
 #menu-list a {
-    color:#222f3d;
+    color: #222f3d;
     text-decoration: none;
 }
+
 #menu-list li {
     padding-left: 20px;
-    border-bottom: 1px solid #222f3d ;
+    border-bottom: 1px solid #222f3d;
 }
+
 .hidden {
     visibility: hidden;
 }
+
 .active {
     visibility: visible;
-animation:slide-in 0.3s ease-in-out;
+    animation: slide-in 0.3s ease-in-out;
 }
 
 @keyframes slide-in {
-    0%{
-       transform: translateX(-100%);
+    0% {
+        transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(0);
     }
 }
+
 @keyframes slide-out {
-    0%{
-       transform: translateX(0);
+    0% {
+        transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
 }
+
+.Panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Panel-ops p {
+    display: inline;
+    margin-left: 15px;
+}
+
+.Panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+}
+
 .Elecktronic {
     font-size: 0.90rem;
     font-weight: 700;
@@ -180,7 +202,6 @@ animation:slide-in 0.3s ease-in-out;
 .hero-sec {
     background-image: url(hero-image.jpg);
     background-size: cover;
-    padding-top: 100px;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -191,7 +212,6 @@ animation:slide-in 0.3s ease-in-out;
     background-color: white;
     color: black;
     height: 40px;
-    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,12 +252,11 @@ animation:slide-in 0.3s ease-in-out;
     padding: 1em;
 }
 
-footer {
-    margin-top: 0px;
+.footer {
+    margin-top: 15px;
 }
 
 .footer-panel1 {
-    cursor: pointer;
     background-color: #37475a;
     color: white;
     display: flex;
@@ -245,23 +264,17 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
-}
-.footer-panel1:hover {
-    background-color:#37475a92;
+    cursor: pointer;
 }
 
 .panel2 {
     background-color: #222f3d;
     color: white;
     height: 300px;
+    display: flex;
     justify-content: center;
 }
-.panel2  a {
-    display: block;
-    padding-left: 45%;
-    padding-top: 2rem;
-    color: #dddddd;
-}
+
 ul {
     margin-top: 100px;
 
@@ -273,11 +286,17 @@ ul a {
     font-size: 1rem;
     color: #dddddd;
     margin-top: 10px;
+
 }
 
-.foot-panel3 {
-    background-color: #222f3d;
+ul a {
+    display: flex;
+    font-size: 1rem;
+    color: #dddddd;
+    margin-top: 10px;
+    text-decoration: none;
 }
+
 .foot-panel3 {
     background-color: #222f3d;
     height: 100px;
@@ -304,9 +323,9 @@ ul a {
 .more-btn {
     margin: 2em auto;
     position: relative;
-    left: 45vw;
+    left: 50vw;
     height: 3em;
-    background-color: #e5530f;
+    background-color: #febd68;
     border: 1px solid orange;
     border-radius: 8px;
     cursor: pointer;
@@ -352,8 +371,8 @@ ul a {
 }
 
 .image-product {
-    width: 20em;
-    padding: 1em;
+    width: 20vw;
+    padding: 1vw;
 }
 
 .product-left-side {
@@ -362,7 +381,7 @@ ul a {
 
 .btn {
     background-color: #febd68;
-    width: 15em;
+    width: 12vw;
     padding: .5em;
     border: 1px solid #febd68;
     border-radius: 15px;
@@ -379,8 +398,8 @@ ul a {
 }
 
 #quantity {
-    width: 15em;
-    padding: .5em;
+    width: 12vw;
+    padding: .5vw;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -431,9 +450,10 @@ a {
     position: absolute;
     top: .9em;
     left: 1.4em;
-    width: 100%;
-    height: 100%;
-    z-index: 2; /* top layer */
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    /* top layer */
     display: block;
     /* Optional styling */
     background-color: transparent;
@@ -450,7 +470,8 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* background layer */
+    z-index: 1;
+    /* background layer */
 }
 
 .cart-page {
@@ -458,6 +479,7 @@ a {
     justify-content: center;
     gap: 1em;
     margin: 1em;
+    width: 100vw;
 }
 
 .cartpage {
@@ -502,7 +524,7 @@ a {
     border: 1px solid gray;
     background-color: hsla(0, 36%, 96%, 0.849);
     padding: 1em;
-    
+
 }
 
 .left {
@@ -523,20 +545,4 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-@media screen and (max-width:600px) {
-    .nav-signin {
-        display: none;
-    }
-    .nav-address{
-        display: none;
-    }
-    .box-sec{
-        flex-wrap: wrap;
-    }
-}
-@media  screen and (max-width:600px) {
-    #languageSelector{
-        display: none;
-    }
 }

@@ -30,8 +30,6 @@ fetch(`https://fakestoreapi.com/products`)
         localStorage.setItem("productCategory", product.category);
       });
     });
-
-    //localStorage.removeItem('searchText');
   })
   .catch(err => console.error("Error loading category items:", err));
 

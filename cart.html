@@ -38,7 +38,7 @@
         const storedProducts = JSON.parse(localStorage.getItem('buyProducts')) || [];
         if (!Array.isArray(storedProducts)) {
             console.error("Invalid data in localStorage for 'buyProducts'. Resetting to an empty array.");
-            localStorage.setItem('buyProducts', JSON.stringify([])); // Reset to an empty array
+            localStorage.setItem('buyProducts', JSON.stringify([])); 
         }
         console.log(storedProducts)
 
