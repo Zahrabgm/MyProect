@@ -39,27 +39,13 @@ document.getElementById('languageSelector').addEventListener('change', (event) =
 });
 */
 // Optional: Close the dropdown menu when clicking outside
-
-document.addEventListener('DOMContentLoaded', () =>  {
-const menuToggle = document.querySelector('#menu-toggle');
-const menuList = document.querySelector('#menu-list');
-
-if (menuToggle && menuList) {
-    menuToggle.addEventListener('click', function () {
-        menuList.classList.toggle('active');
-    })
-} else {
-    console.error('Menu toggle or menu list element not found', error)}
-});
-
 // Footer Section
-document.querySelector('.footer-panel1').addEventListener('click', () => {
+document.querySelector ('.footer-panel1').addEventListener ('click', () => {
     window.scrollTo ({
         top: 0,
         behavior:'smooth'
     })
 });
-
 // Products section
 const boxSec = document.querySelector(".box-sec");
 const morebtn = document.querySelector(".more-btn");
@@ -90,6 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
         .catch(err => console.error("Error search/loading products:", err));
+});
+ document.addEventListener('DOMContentLoaded', () =>  {
+const menuToggle = document.querySelector('#menu-toggle');
+const menuList = document.querySelector('#menu-list');
+
+if (menuToggle && menuList) {
+    menuToggle.addEventListener('click', function () {
+        menuList.classList.toggle('active');
+    })
+} else {
+    console.error('Menu toggle or menu list element not found', error)}
 });
 
         // search section - redirect to new page
