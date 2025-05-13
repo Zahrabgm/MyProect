@@ -129,6 +129,9 @@ span {
 #menu-list {
     margin-top: -10px;
     display: none;
+<<<<<<<<< Temporary merge branch 1
+     background: #dddddd;
+=========
     background: #dddddd;
     width: 250px;
     height: 30vh;
@@ -136,6 +139,17 @@ span {
     padding: 0;
     margin-left: 0px;
 }
+<<<<<<<<< Temporary merge branch 1
+#menu-list.active {
+    display: block;
+}
+=========
+
+#menu-list.active {
+    display: block;
+}
+
+>>>>>>>>> Temporary merge branch 2
 #menu-list a {
     color: #222f3d;
     text-decoration: none;
@@ -252,8 +266,14 @@ span {
     padding: 1em;
 }
 
+<<<<<<<<< Temporary merge branch 1
+footer {
+    margin-top: 0px;
+=========
 .footer {
     margin-top: 15px;
+
+>>>>>>>>> Temporary merge branch 2
 }
 
 .footer-panel1 {
@@ -545,4 +565,30 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+<<<<<<<<< Temporary merge branch 1
+@media screen and (max-width:600px) {
+    .nav-signin {
+        display: none;
+    }
+    .nav-address{
+        display: none;
+    }
+    .box-sec{
+        flex-wrap: wrap;
+    }
+}
+@media  screen and (max-width:600px) {
+    #languageSelector{
+        display: none;
+    }
+=========
+
+/* Responsive website */
+@media screen and (max-width:1150px) {
+    .nav-signin, #languageSelector, .nav-address {
+        display: none;
+    }
+
+>>>>>>>>> Temporary merge branch 2
 }
