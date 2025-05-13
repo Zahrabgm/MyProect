@@ -34,7 +34,7 @@ document.getElementById('languageSelector').addEventListener('change', (event) =
             break;
         default:
             console.log('Language not supported');
-            document.body.innerHTML += `<p>Language not supported</p>`;
+            document.body.innerHTML += `<p>Language not supported</p>`
     }
 });
 // Optional: Close the dropdown menu when clicking outside
@@ -88,8 +88,7 @@ let endIndex = 8;
                 }
             })
         })
-        .catch(err => console.error("Error search/loading products:", err));
-});
+        .catch(err => console.error("Error search/loading products:", err))
 
         // search section - redirect to new page
         searchbtn.addEventListener("click", () => {
