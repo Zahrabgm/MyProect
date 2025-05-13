@@ -16,10 +16,7 @@ fetch ('https://fakestoreapi.com/products/categories').then(Response =>{
 .catch(error =>{
     console.error(`Fetch error:`, error);
     document.querySelector('.nav-search.border').innerHTML += `<p>Something went wrong!<p/>`
-})
-
-
-/* Language section*/
+});
 document.getElementById('languageSelector').addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
 
@@ -52,13 +49,14 @@ if (menuToggle && menuList) {
     console.error('Menu toggle or menu list element not found')
 }
 });
+
 // Footer Section
 document.querySelector('.footer-panel1').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior:'smooth'
     })
-})
+});
 
 // Products section
 const boxSec = document.querySelector(".box-sec");
@@ -91,7 +89,7 @@ let endIndex = 8;
         .catch(err => console.error("Error search/loading products:", err))
 
         // search section - redirect to new page
-        searchbtn.addEventListener("click", () => {
+        searchbtn.addEventListener ("click", () => {
             localStorage.setItem("searchText", searchInput.value);
             window.location.href = 'aftersearching.html';
         })
