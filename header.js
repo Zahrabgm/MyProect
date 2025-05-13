@@ -39,7 +39,7 @@ fetch(`https://fakestoreapi.com/products/categories`)
             console.error("searchInput or searchbtn element not found.");
         }
     })
-    .catch(err => console.error("Error loading search categories:", err));
+    .catch(err => console.error("Error loading search categories:", err))
 
 // get quantity in cart and show up
 const storedProducts = JSON.parse(localStorage.getItem('buyProducts'));
@@ -62,25 +62,3 @@ function getWithExpiry(key) {
         return null; // expired
     }
     return item.value;
-}
-
-// Optional: Close the dropdown menu when clicking outside
-    const menuToggle = document.querySelector('#menu-toggle');
-    const menuList = document.querySelector('#menu-list');
-    console.log(menuList);
-    if (menuToggle && menuList) {
-        menuToggle.addEventListener('click', function () {
-            menuList.classList.toggle('active');
-        })
-    } else {
-        console.error('Menu toggle or menu list element not found')
-    } 
-
-// click and Enter key
-function handleSearch() {
-    const value = searchInput.value.trim();
-    const selectedCategory = document.querySelector(".search-select").value;
-        localStorage.setItem("searchText", value);
-        localStorage.setItem("searchCategory", selectedCategory);
-        window.location.href = "aftersearching.html";
-}
