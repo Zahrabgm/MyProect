@@ -1,43 +1,4 @@
-/*
 
-fetch ('https://fakestoreapi.com/products/categories').then(Response =>{
-    if(!Response.ok) {
-        throw new Error("there is an error");    
-    }
-    return Response.json();
-})
-.then(data =>  {
-
- console.log(data)
-
- const resultsContainer = document.querySelector(`.nav-search border`)
- resultsContainer.innerHTML += `<p>Result: ${JSON.stringify(data)}</p>`
-})
-.catch(error =>{
-    console.error(`Fetch error:`, error);
-    document.querySelector('.nav-search.border').innerHTML += `<p>Something went wrong!<p/>`
-})
-
-
-/* Language section
-document.getElementById('languageSelector').addEventListener('change', (event) => {
-    const selectedLanguage = event.target.value;
-
-    switch (selectedLanguage) {
-        case 'en':
-            console.log('Language changed to English');
-            document.body.innerHTML += `<p>Language changed to English</p>`;
-            break;
-        case 'de':
-            console.log('Language changed to Deutsch');
-            document.body.innerHTML += `<p>Sprache geändert zu Deutsch</p>`;
-            break;
-        default:
-            console.log('Language not supported');
-            document.body.innerHTML += `<p>Language not supported</p>`;
-    }
-});
-*/
 // Optional: Close the dropdown menu when clicking outside
 // Footer Section
 document.querySelector ('.footer-panel1').addEventListener ('click', () => {
@@ -52,14 +13,15 @@ const morebtn = document.querySelector(".more-btn");
 
 let startIndex = 0;
 let endIndex = 8;
-// get api 8 products
-document.addEventListener("DOMContentLoaded", () => {
+
+// Get API 8 products
+//document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://fakestoreapi.com/products`)
         .then(response => response.json())
         .then(allproducts => {
             createElement(allproducts);
 
-            // load more 8 products after clicking
+            // Load more 8 products after clicking
             morebtn.addEventListener("click", () => {
                 startIndex += 8;
                 endIndex += 8;
@@ -68,12 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                         <b>NO PRODUCT TO LOAD !</b>     
                                     </div>`;
                     morebtn.style.display = "none";
-
-                }
-                else {
+                } else {
                     createElement(allproducts);
                 }
-            })
+            });
         })
         .catch(err => console.error("Error search/loading products:", err));
 });
@@ -97,24 +57,35 @@ if (menuToggle && menuList) {
     .catch(err => console.error("Error loading products:", err));
     
 // create function for showing produtcs
+        .catch(err => console.error("Error loading products:", err));
+//});
+
+// Create function for showing products
 function createElement(array) {
     array.slice(startIndex, endIndex).forEach((product) => {
         const box = document.createElement("div");
         box.classList.add("box");
         box.innerHTML = `
-                            <div class="box-contant">
-                                <a href="product.html"><h2>${product.title}</h2></a>
-                                <div class="box-img">
-                                    <a href="product.html"><img class="img-home" src="${product.image}" alt="${product.category}"></a>
-                                </div>
-                                <a href="product.html" class="see-more">See more</a>
-                            </div>
-                            `;
+            <div class="box-contant">
+                <a href="product.html"><h2>${product.title}</h2></a>
+                <div class="box-img">
+                    <a href="product.html"><img class="img-home" src="${product.image}" alt="${product.category}"></a>
+                </div>
+                <a href="product.html" class="see-more">See more</a>
+            </div>
+        `;
         boxSec.appendChild(box);
         box.querySelector(".box-contant").addEventListener("click", () => {
             localStorage.setItem("productId", product.id);
             localStorage.setItem("productCategory", product.category);
         });
-    })};
-  
-    
+    });
+}
+
+
+
+
+
+
+
+

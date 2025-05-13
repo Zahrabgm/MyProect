@@ -27,12 +27,13 @@ fetch(`https://fakestoreapi.com/products/categories`)
         });
 
         if (searchInput || searchbtn) {
-            searchbtn.addEventListener("click", () => {
-                const value = searchInput.value.trim();
-                const selectedCategory = document.querySelector(".search-select").value;
-                localStorage.setItem("searchText", value);
-                localStorage.setItem("searchCategory", selectedCategory);
-                window.location.href = "aftersearching.html";
+            searchbtn.addEventListener("click", handleSearch);
+
+            searchInput.addEventListener("keydown", (event) => {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // stops form from submitting
+                    handleSearch();
+                }
             });
         } else {
             console.error("searchInput or searchbtn element not found.");
@@ -55,12 +56,9 @@ cartQuantity.addEventListener("click", () => {
 function getWithExpiry(key) {
     const item = JSON.parse(localStorage.getItem(key));
     if (!item) return null;
-  
+
     if (Date.now() > item.expiry) {
-      localStorage.removeItem(key);
-      return null; // expired
+        localStorage.removeItem(key);
+        return null; // expired
     }
     return item.value;
-  }
-
- 
